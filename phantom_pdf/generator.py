@@ -4,7 +4,10 @@ import logging
 from subprocess import Popen, STDOUT, PIPE
 import os
 import phantom_pdf_bin
-import urlparse
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
 import uuid
 
 from django.conf import settings
